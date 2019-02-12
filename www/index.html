@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/styles.css"/>
     <!-- You need this although you do not need a physical file as build wil inject it in -->
     <script type="text/javascript" src="cordova.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
@@ -25,7 +26,17 @@
       </div>
       <div data-role="content">
         <h3>Boom!</h3>
-        <p>This is my first app build... how easy is this!</p>
+        <p>This is my first app build... how easy is this! <a href="#page2">click here</a> for page 2</p>
+      </div>
+    </div>
+
+    <div data-role="page" id="page2" data-title="This is page 2">
+      <div data-role="header">
+        <h1>Home</h1>
+      </div>
+      <div data-role="content">
+        <h3>Boom!</h3>
+        <p>This is my first app build... how easy is this! <a href="#home">click here</a> for page 1</p>
       </div>
     </div>
 
