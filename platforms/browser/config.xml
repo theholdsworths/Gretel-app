@@ -1,27 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.adigitalengagement.locationtracker" version="1.0.1" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.uol.cpd.image_capture" version="1.0.1" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>My CPD APP2</name>
-    <description>
-        this is my description app.
-    </description>
-    <author email="your email" href="website">
-        Wayne Christian
-    </author>
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <name>Image capture test</name>
+    <description>Image capture test.</description>
+    <author email="14533160@lincoln.ac.uk" href="website">Scott Holdsworth</author>
+    <preference name="DisallowOverscroll" videoholdervalue="true" />
     <icon src="icon.png" />
-    <splash src="splash.png" />
-    <icon platform="android" qualifier="ldpi" src="assets/icons/android/icon-36-ldpi.png" />
-    <icon platform="android" qualifier="mdpi" src="assets/icons/android/icon-48-mdpi.png" />
-    <icon platform="android" qualifier="hdpi" src="assets/icons/android/icon-72-hdpi.png" />
-    <icon platform="android" qualifier="xhdpi" src="assets/icons/android/icon-96-xhdpi.png" />
-    <icon platform="android" qualifier="xxhdpi" src="assets/icons/android/icon-144-xxhdpi.png" />
-    <icon platform="android" qualifier="xxxhdpi" src="assets/icons/android/icon-192-xxxhdpi.png" />
-    <splash platform="android" qualifier="ldpi" src="assets/splash/android/screen-ldpi-portrait.png" />
-    <splash platform="android" qualifier="mdpi" src="assets/splash/android/screen-mdpi-portrait.png" />
-    <splash platform="android" qualifier="hdpi" src="assets/splash/android/screen-hdpi-portrait.png" />
-    <splash platform="android" qualifier="xhdpi" src="assets/splash/android/screen-xhdpi-portrait.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -29,15 +18,16 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="keepRunning" value="false" />
+    <allow-navigation href="*://*youtube.com" />
+    <preference name="keepRunning" value="true" />
+    <preference name="stay-in-webview" value="true" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="portrait" />
+    <preference name="orientation" value="landscape" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="true" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="true" />
@@ -45,5 +35,4 @@
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-installLocation" value="auto" />
-    <preference name="splash-screen-delay" value="5000" />
 </widget>
