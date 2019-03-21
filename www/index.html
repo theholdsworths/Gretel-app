@@ -1,17 +1,20 @@
+<!DOCTYPE HTML>
 <html>
 <head>
-  <title>Exercise tracker </title>
-  <meta name ="viewport" content="width=device=width, initial-scale=1">
+  <title>new app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Apple settings -->
+<!--SOME APPLE SEETINGS-->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- need this but do not need a physical reference -->
+<!--You need this although you do not need a physical reference as build will inject it in-->
   <script type="text/javascript" src="cordova.js"></script>
-  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css"/>
-  <link rel="stylesheet" href="css/custom.css"/>
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+
 </head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <body>
 
@@ -62,68 +65,92 @@
     <p>This is my second app build... how easy is this!</p>
 >>>>>>> a813b7f8b867dccb1f36a6a00c31e5f3daed7a55
   </div>
+=======
+>>>>>>> parent of 328529c... Google maps implementation
 
-  <div data-role="page" id="startTracking" data-theme="b">
-    <div data-role="header">
-      <h1>Track workout</h1>
-      <div data-role="nabar">
-        <ul>
-          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
-          <li><a href="#startTracking" data-transition="none" data-icon="plus">Track Workout</a></li>
-          <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
-        </ul>
-      </div>
-    </div>
-    <div data-role="content">
-      <p id="startTracking_status"></p>
-      <div data-role="fieldcontain" class="ui-hide-label">
-        <label for="track_id">Track ID/Name:</label>
-        <input type="text" name="track_id" id="track_id" placeholder="Workout ID/Name">
-      </div>
-      <button data-role="button" id="startTracking_start">Start Tracking</button>
-      <button data-role="button" id="startTracking_stop">Stop Tracking</button>
-    </div>
+<!--notice i have added the class online which will change based on our online listeners-->
+<body class="online">
+
+
+<!--note this is outside of the page role so will never get removed and is always accessible-->
+<!--
+<div id="offline" class="fixed">
+  <h2>Hold up!</h2>
+  <p>You are currently offline which means we can not access your data so wil not be able to see your dashboard.
+  </p>
+  <br>
+  <p>Dont worry you can still do stuff offline, and we will sync up next time you are connected to the internet. </p>
+</div>
+-->
+<!--end offline display-->
+
+<!--home-->
+<div data-role="page" id="home" data-theme="b">
+  <div data-role="header"> <a href="#menu" data-icon="bars" data-iconpos="notext" class="" data-theme="b" title="Menu">
+  <span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars ui-icon-
+  shadow">&nbsp;</span></span></a></div>
+  <div data-role="content">
+    <h3>Boom!</h3>
+    <p>This is my second app build... how easy is this!</p>
   </div>
+</div>
 
-  <div data-role="page" id="history" data-theme="b">
-    <div data-role="header">
-      <h1>History</h1>
-      <div data-role="nabar">
-        <ul>
-          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
-          <li><a href="#startTracking" data-transition="none" data-icon="plus">Track Workout</a></li>
-          <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
-        </ul>
-      </div>
-    </div>
-    <div data-role="content">
-      <p id="tracks_recorded"></p>
-      <ul data-role="listview" id="history_tracklist">
-      </ul>
-    </div>
+<!--home-->
+
+
+<!--graph-->
+<div data-role"page" id="graph" data-theme="b">
+  <div data-role="header"> <a href="#menu" data-icon="bars" data-iconpos="notext" class="" data-theme="b" title="Menu">
+  <span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars ui-icon-
+  shadow">&nbsp;</span></span></a></div>
+  <div data-role="content">
+    <h3>Graphs</h3>
+    <p>When you scroll it should animate</p>
+    <div id="donut" class="graph"></div>
+    <div id="line" class="graph"></div>   
   </div>
+</div>
+<!--graph-->
 
-  <div data-role="page" id="track_info" data-theme="b">
-    <div data-role="header">
-      <h1>Viewing single Workout</h1>
-      <div data-role="nabar">
-        <ul>
-          <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
-          <li><a href="#startTracking" data-transition="none" data-icon="plus">Track Workout</a></li>
-          <li><a href="#history" data-transition="none" data-icon="star">History</a></li>
-        </ul>
-      </div>
-    </div>
-    <div data-role="content">
-      <p id="track_info_info"></p>
-      <div id="map_canvas" style="posiion:absolute;bottom:0;left:0;width:100%;height:300px;">
-      </div>
-    </div>
+
+<!--sound-->
+
+<!--sound-->
+
+
+<!--menu-->
+<div data-role"page" id="menu" data-theme="b">
+  <div data-role="header"> <a href="#menu" data-icon="bars" data-iconpos="notext" class="" data-theme="b" title="Menu">
+  <span class="ui-btn-inner"><span class="ui-btn-text">Menu</span><span class="ui-icon ui-icon-bars ui-icon-
+  shadow">&nbsp;</span></span></a></div>
+  <div data-role="content">
+    <ul data-role="listview" data-inset="true" class="ui-alt-icon" data-theme="b">
+     <li><a href="#home">Home</a></li>
+     <li><a href="#graph">Graphs</a></li>
+     <li><a href="#sound">Sound</a></li>
+     <li><a href="#">Another Button</a></li>
+    </ul>
   </div>
+</div>
+<!--menu-->
 
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3XiX8WHDK02uucffpB7Q43KR4tFhI-KE"></script>
-  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+
+<!--scripts at the bottom of the page-->
+
+  <script src="js/jquery.min.js"></script>
+
+<!--note jqm defaults defines preferences for JQM so needs to be declared before the library-->
+  <script src="js.jqm_default.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<!--high charts stuff with custom theme-->
+  <script src="js/highcharts.js"></script>
+  <script src="js/modules/no-data-to-display.js"></script>
+  <script src="js/themes/mypbtheme.js"></script>
+
+<!--high charts stuff-->
+
+<!--our js file goes last so we know all dependencies are loaded first-->
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
